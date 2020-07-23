@@ -1,5 +1,4 @@
 import Knex from 'knex';
-import path from 'path';
 
 export async function up(knex: Knex) {
   return knex.schema.createTable('types', table => {
