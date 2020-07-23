@@ -3,7 +3,7 @@ import knex from '../database/connection';
 
 class UserRequestController {
   async show(request: Request, response: Response) {
-    const idUser = request.params;
+    const idUser = request.params.id;
 
     if(idUser) {
       const requestByUser = 

@@ -11,13 +11,14 @@ class UsersController {
   }
 
   async show(request: Request, response: Response) {
-    const idUser = request.params;
+    const idUser = request.params.id;
 
     const userRequest = 
       await knex('users')
       .select('*')
       .where('id', '=', String(idUser));
 
+    console.log(userRequest);
     if(userRequest) {
       return response.json(userRequest);
     }
