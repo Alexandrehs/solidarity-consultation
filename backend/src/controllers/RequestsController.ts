@@ -15,7 +15,7 @@ class RequestsController {
 
     if(idRequest) {
       const request = 
-        await knex('request')
+        await knex('requests')
         .select('*')
         .where('id', '=',idRequest);
 
@@ -29,12 +29,12 @@ class RequestsController {
     const newRequestData = request.body;
     
     if(newRequestData) {
-      const idNewRequest = await knex('request').insert(newRequestData);
+      const idNewRequest = await knex('requests').insert(newRequestData);
 
       if(idNewRequest) {
         return response.json({
           id: idNewRequest,
-          newRequestData
+          data: newRequestData
         })
       }
     }

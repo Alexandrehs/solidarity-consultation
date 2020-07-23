@@ -17,7 +17,10 @@ class TypesController {
       const idNewType = await knex('types').insert(newType);
 
       if(idNewType) {
-        return response.json({id: idNewType, newType});
+        return response.json({
+          id: idNewType,
+          data: newType
+        });
       }
     }
   }

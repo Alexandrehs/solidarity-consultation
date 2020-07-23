@@ -17,3 +17,5 @@ class UserRequestController {
     }
   }
 }
+
+export default UserRequestController;

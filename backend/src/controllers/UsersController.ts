@@ -28,7 +28,10 @@ class UsersController {
 
     const idNewUser = await knex('users').insert(requestDataNewUser);
 
-    return response.json({id: idNewUser, requestDataNewUser});
+    return response.json({
+      id: idNewUser,
+      data: requestDataNewUser
+    });
   }
 }
 
