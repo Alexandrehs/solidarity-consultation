@@ -16,7 +16,7 @@ class UsersController {
     const userRequest = 
       await knex('users')
       .select('*')
-      .where('id', '=', idUser);
+      .where('id', '=', String(idUser));
 
     if(userRequest) {
       return response.json(userRequest);

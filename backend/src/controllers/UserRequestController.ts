@@ -8,12 +8,12 @@ class UserRequestController {
     if(idUser) {
       const requestByUser = 
         await knex('requests')
-        .select('*')
-        .where('id_user', '=', idUser);
+        .where({
+          id_user: idUser
+        })
+        .select('*');
 
-      if(requestByUser) {
-        return response.json(requestByUser);
-      }  
+    return response.json(requestByUser);
     }
   }
 }
