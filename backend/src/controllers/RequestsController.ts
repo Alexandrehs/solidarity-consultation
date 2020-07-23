@@ -37,3 +37,5 @@ class RequestsController {
     }
   }
 }
+
+export default RequestsController;
