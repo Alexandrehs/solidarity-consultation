@@ -5,8 +5,22 @@ class TypesController {
   async index(request: Request, response: Response) {
     const allTypes = await knex('types').select('*');
 
-    if(allTypes) {
+    if(allTypes) { 
       return response.json(allTypes);
     }
   }
+
+  async create(request: Request, response: Response) {
+    const newType = request.body;
+
+    if(newType) {
+      const idNewType = await knex('types').insert(newType);
+
+      if(idNewType) {
+        return response.json({id: idNewType, newType});
+      }
+    }
+  }
 }
+
+export default TypesController;
