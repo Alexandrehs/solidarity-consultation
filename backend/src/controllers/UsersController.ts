@@ -3,7 +3,11 @@ import knex from '../database/connection';
 
 class UsersController {
   async index(request: Request, response: Response) {
-    return response.json({mss: 'Todos os abestadus listados aqui!'});
+    const allUsers = await knex('users').select('*');
+
+    if(allUsers) {
+      return response.json(allUsers);
+    }
   }
 
   async show(request: Request, response: Response) {
