@@ -14,7 +14,10 @@ class RequestsController {
     const idRequest = request.params;
 
     if(idRequest) {
-      const request = await knex('request').select('*').where(idRequest);
+      const request = 
+        await knex('request')
+        .select('*')
+        .where('id', '=',idRequest);
 
       if(request) {
         return response.json(request);
