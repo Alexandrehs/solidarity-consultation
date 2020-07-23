@@ -6,6 +6,16 @@ class UsersController {
     return response.json({mss: 'Todos os abestadus listados aqui!'});
   }
 
+  async show(request: Request, response: Response) {
+    const idUser = request.params;
+
+    const userRequest = await knex('users').select('*');
+
+    if(userRequest) {
+      return response.json(userRequest);
+    }
+  }
+
   async create(request: Request, response: Response) {
     const requestDataNewUser = request.body;
 
