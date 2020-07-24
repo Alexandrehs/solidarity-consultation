@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 import {Container, Form, FormButtom, FormInputs} from './styles';
 
@@ -13,7 +14,9 @@ const Login: React.FC = () => {
         </FormInputs>
 
         <FormButtom>
-          <span><a href="#">não tenho cadastro.</a></span>
+          <Link to="/register">
+            <span>não tenho cadastro.</span>
+          </Link>
           <button className="button">logar</button>
         </FormButtom>
       </Form>

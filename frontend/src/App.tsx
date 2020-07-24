@@ -2,13 +2,12 @@ import React from 'react';
 
 import GlobalStyles from './config/globalStyles';
 
-import Login from './pages/Login';
-import Register from './pages/Register';
+import Routes from './routes';
 
 function App() {
   return (
     <>
-      <Register />
+      <Routes />
       <GlobalStyles />
     </>
   );

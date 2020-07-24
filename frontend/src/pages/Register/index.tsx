@@ -1,8 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-import {Container, Form, FormButton, Doctor} from './styles';
+import {Container, Form, FormButton, Type} from './styles';
+
+interface PropsRegister {
+  type: string;
+}
 
 const Register: React.FC = () => {
+  const [type, setType] = useState<PropsRegister>();
+
   return (
     <Container>
       <strong>Formulário de cadastro.</strong>
@@ -18,10 +24,10 @@ const Register: React.FC = () => {
           <option value="2">Não</option>
         </select>
 
-        <Doctor>
+        <Type>
           <strong>Seu registro,</strong>
           <input type="text" name="indentification" id=""/>
-        </Doctor>
+        </Type>
 
         <FormButton>
           <button className="button">Criar</button>

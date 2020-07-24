@@ -18,4 +18,4 @@ export const Form = styled.div`
   
 `;
 
-export const Doctor = styled.div``;
+export const Type = styled.div``;
