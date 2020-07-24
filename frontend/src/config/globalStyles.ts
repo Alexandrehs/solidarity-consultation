@@ -19,7 +19,7 @@ export default createGlobalStyle`
   }
 
   .button {
-    background: #444;
+    background: red;
     color: #fff;
     border-radius: 8px;
     font-size: 16px;
@@ -31,7 +31,7 @@ export default createGlobalStyle`
     height: 20px;
     width: 100%;
     padding: 5px;
-    color: #777;
+    color: red;
     border-radius: 8px;
     border: 1px solid #999;
   }
