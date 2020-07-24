@@ -1,8 +1,16 @@
 import React from 'react';
 
+import GlobalStyles from './config/globalStyles';
+
+import Login from './pages/Login';
+import Register from './pages/Register';
+
 function App() {
   return (
-    <h1>Abestadus</h1>
+    <>
+      <Register />
+      <GlobalStyles />
+    </>
   );
 }
 
